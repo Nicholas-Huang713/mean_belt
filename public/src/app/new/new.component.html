@@ -1,0 +1,16 @@
+<div class="container text-center">
+    <h3>Know of a pet needing a home?</h3>
+    <p class="text-danger">{{errors?.name?.message}}</p>
+    <p class="text-danger">{{errors?.type?.message}}</p>
+    <p class="text-danger">{{errors?.desc?.message}}</p>
+    <form (submit)="addPet()">
+        <p>Pet name: <input type="text" name="newPet.name" [(ngModel)]="newPet.name"></p>
+        <p>Pet type: <input type="text" name="newPet.type" [(ngModel)]="newPet.type"></p>
+        <p>Description: <input type="text" name="newPet.desc" [(ngModel)]="newPet.desc"></p>
+        <h5>Skills:</h5>
+        <p>Skill 1: <input type="text" name="newPet.skill1" [(ngModel)]="newPet.skill1"></p>
+        <p>Skill 2: <input type="text" name="newPet.skill2" [(ngModel)]="newPet.skill2"></p>
+        <p>Skill 3: <input type="text" name="newPet.skill3" [(ngModel)]="newPet.skill3"></p>
+        <button>Add Pet</button> | <button [routerLink]="['']">Cancel</button>
+    </form>
+</div>
